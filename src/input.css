@@ -5,4 +5,55 @@
 .toggle{
     display: none;
 }
-  
+.mobile-shorten{
+    position: relative;
+    background-image:url(/images/bg-shorten-mobile.svg);
+    background-repeat: no-repeat;
+    background-position:top right;
+    background-size:80%;
+}
+.desktop-shorten{
+    background-image:url(/images/bg-shorten-desktop.svg);
+    background-repeat: no-repeat;
+}
+.cardone::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 7px;
+    height: 55px;
+    background-color: rgb(12, 201, 201);
+}
+.cardtwo::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 7px;
+    height: 55px;
+    background-color: rgb(12, 201, 201);
+}
+.cardone::after{
+    left:46.3%;
+}
+.cardtwo::after{
+    left:47.9%;
+}
+.cardonedesktop::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 55px;
+    height: 7px;
+    background-color: rgb(12, 201, 201);
+}
+
+.cardtwodesktop::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 55px;
+    height: 7px;
+    background-color: rgb(12, 201, 201);
+}

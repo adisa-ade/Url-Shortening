@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray overflow-x-hidden">
+<body class="bg-zinc-200 overflow-x-hidden font-poppins">
     <header class="md:fixed flex justify-between p-5 space-x-10 md:px-28 bg-white z-10 w-full 
      ">
         <div>
@@ -59,22 +59,53 @@
             <img src="/images/illustration-working.svg" alt="bg-image" class=" object-cover relative left-20 max-w-lg lg:left-64 md:left-0 md:mx-auto md:max-w-2xl lg:max-w-none lg:-mt-8 lg:-m-0">        
         </div>
         <div class="text-center lg:text-left mx-auto w-5/6  lg:mx-0 space-y-6">
-            <h1 class="text-5xl font-bold">More than just shorter links</h1>
-            <p class="text-xl w-80 mx-auto lg:mx-0 md:w-full text-gray">Build your brand's recognition and get detailed insights on how your links are performing.</p>
+            <h1 class="text-4xl font-bold mx-8 md:text-5xl md:mx-0">More than just shorter links</h1>
+            <p class="text-lg w-80 mx-auto lg:mx-0 md:w-full text-grayishViolet">Build your brand's recognition and detailed insights on how your links are performing.</p>
             <button class="bg-cyan p-3 w-40 rounded-full text-white">Get Started</button>
         </div> 
     </div>
     <!-- END HERO -->
     </main>
-    <section class="flex flex-col items-center space-y-4">
-        <div class="relative flex flex-col bg-darkViolet rounded-lg top-full  w-11/12 md:w-4/5 p-7 md:flex-row md:justify-evenly md:items-center md:gap-x-2 space-y-7 mx-auto  md:space-y-0 -mt-20 md:-mt-14">
+    <section class="flex flex-col space-y-20 items-center">
+        <div class="shorten relative flex flex-col bg-darkViolet rounded-lg top-full  w-11/12 md:w-4/5 p-7 md:flex-row md:justify-evenly md:items-center md:gap-x-2 space-y-7 mx-auto  md:space-y-0 -mt-20 md:-mt-14">
             <input type="text" class="bg-white p-4 md:p-2 lg:p-4 rounded-md md:w-4/5 lg:w-10/12" placeholder="Shorten a link here...">
             <button class="bg-cyan p-4 md:p-2 lg:p-4 text-white font-bold rounded-md">Shorten It!</button>
         </div>
-        <div class="text-center">
+        <div class="text-center space-y-4">
         <h1 class="text-3xl font-bold">Advanced Statistics</h1>
-        <p class="text-xl w-80 mx-auto lg:mx-0 md:w-auto text-grayishViolet">Track how your links are p`erforming across the web with our advanced statistics dashboard..</p>
+        <p class="text-base md:text-xl w-80 mx-auto lg:mx-0 md:w-auto text-grayishViolet">Track how your links are performing across the web with our advanced statistics dashboard..</p>
     </div>
+    <!-- CARDS -->
+    <div class="flex flex-col md:flex-row items-center md:items-baseline space-y-20 md:space-y-0 lg:w-4/5 md:mx-10  md:space-x-8">
+        <!-- CARD ONE -->
+        <div class="card relative w-10/12 bg-white rounded-sm text-center p-8 space-y-5">
+            <div class="absolute bg-darkViolet -top-9 left-28 md:left-7 lg:left-8 p-4 rounded-full">
+            <img src="/images/icon-brand-recognition.svg" alt="brand">
+            </div>
+            <h2 class="text-xl font-bold">Brand Recognition</h2>
+            <p class="text-lg text-gray font-medium">Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.</p>
+        </div>
+        <!-- END CARD ONE -->
+        <!-- CARD TWO -->
+        <div class="card1 relative w-10/12 bg-white rounded-sm text-center p-8 space-y-5">
+            <div class="absolute bg-darkViolet -top-9 left-28 md:left-7 lg:left-8 p-4 rounded-full">
+            <img src="/images/icon-detailed-records.svg" alt="brand">
+            </div>
+            <h2 class="text-xl font-bold">Detailed Records</h2>
+            <p class="text-lg text-gray font-medium">Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions</p>
+        </div>
+        <!-- END CARD TWO -->
+        <!-- CARD THREE -->
+        <div class="relative w-10/12 bg-white rounded-sm text-center p-8 space-y-5">
+            <div class="absolute bg-darkViolet -top-9 left-28 md:left-7 lg:left-8 p-4 rounded-full">
+            <img src="/images/icon-fully-customizable.svg" alt="brand">
+            </div>
+            <h2 class="text-xl font-bold">Fully Customizable</h2>
+            <p class="text-lg text-gray font-medium">Improve brand awareness and content discoverability through customzable links, supercharging audience engagement.</p>
+        </div>
+        <!-- END CARD THREE -->
+    </div>
+    <!-- END CARDS -->
     </section>    
     <script src="script.js"></script>
 </body>
