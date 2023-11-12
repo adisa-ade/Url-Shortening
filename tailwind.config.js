@@ -11,7 +11,7 @@ module.exports = {
         'gray': 'hsl(0, 0%, 75%)',
         'grayishViolet': 'hsl(257, 7%, 63%)',
         'verydarkBlue':' hsl(255, 11%, 22%)',
-        'verydarkViole': 'hsl(260, 8%, 14%)',
+        'verydarkViolet': 'hsl(260, 8%, 14%)',
               },
       fontWeight:{
         medium: '500',

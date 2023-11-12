@@ -19,10 +19,10 @@ const shorten = document.querySelector('.shorten')
 
 if (window.screen.width > 767){    
     shorten.classList.add('desktop-shorten')
-    
 }
 else(
     shorten.classList.add('mobile-shorten')       
+    
 )
 
 const card = document.querySelector('.card')
@@ -36,3 +36,15 @@ else if(window.screen.width > 767){
     card.classList.add('cardonedesktop')
     card1.classList.add('cardtwodesktop')
 }
+
+
+const boost = document.querySelector('.boost')
+
+    if (window.screen.width > 767){
+        boost.classList.add('desktop-boost')
+    }
+    else{
+        boost.classList.add('mobile-boost')
+    }
+
+    
