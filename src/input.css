@@ -73,5 +73,45 @@
     border: 3px solid rgb(182, 48, 48);
 }
 .link{
-    /* display: none */
+    display: none;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.span{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.button-copy{
+    background-color: cyan;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+}
+.linkToShorten{
+    color: darkviolet;
+}
+.shortenLink{
+    color: cyan;
+}
+@media screen and (max-width:480px) {
+    .list{
+        display: flex;
+        flex-direction: column;   
+        justify-content: flex-start;
+        align-items: flex-start;     
+        row-gap: 20px;
+    }      
+    .span{
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        width: 100%;
+        row-gap: 20px;
+    }
+    
 }

@@ -619,6 +619,10 @@ video {
   display: flex;
 }
 
+.list-item {
+  display: list-item;
+}
+
 .hidden {
   display: none;
 }
@@ -745,10 +749,6 @@ video {
 
 .scroll-smooth {
   scroll-behavior: smooth;
-}
-
-.break-words {
-  overflow-wrap: break-word;
 }
 
 .rounded-full {
@@ -882,16 +882,6 @@ video {
   font-weight: 500;
 }
 
-.text-cyan {
-  --tw-text-opacity: 1;
-  color: hsl(180 66% 49% / var(--tw-text-opacity));
-}
-
-.text-darkViolet {
-  --tw-text-opacity: 1;
-  color: hsl(257 27% 26% / var(--tw-text-opacity));
-}
-
 .text-gray {
   --tw-text-opacity: 1;
   color: hsl(0 0% 75% / var(--tw-text-opacity));
@@ -914,10 +904,6 @@ video {
 
 .opacity-30 {
   opacity: 0.3;
-}
-
-.opacity-90 {
-  opacity: 0.9;
 }
 
 .outline-none {
@@ -1022,7 +1008,53 @@ video {
 }
 
 .link{
-  /* display: none */
+  display: none;
+}
+
+.list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.span{
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  align-items: center;
+}
+
+.button-copy{
+  background-color: cyan;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.linkToShorten{
+  color: darkviolet;
+}
+
+.shortenLink{
+  color: cyan;
+}
+
+@media screen and (max-width:480px) {
+  .list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 20px;
+  }
+
+  .span{
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    width: 100%;
+    row-gap: 20px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1089,26 +1121,12 @@ video {
     flex-direction: row;
   }
 
-  .md\:items-center {
-    align-items: center;
-  }
-
   .md\:items-baseline {
     align-items: baseline;
   }
 
-  .md\:justify-between {
-    justify-content: space-between;
-  }
-
   .md\:justify-around {
     justify-content: space-around;
-  }
-
-  .md\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
@@ -1230,10 +1248,6 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:p-2 {
-    padding: 0.5rem;
   }
 
   .lg\:p-4 {

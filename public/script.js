@@ -5,7 +5,7 @@ const shorten = document.querySelector('.shorten')
 const card = document.querySelector('.card')
 const card1 = document.querySelector('.card1')
 const button = document.querySelector('.button-url')
-const copyButton = document.querySelector('.button-copy')
+
 
 
 // MOBILE NAVIGATION
@@ -58,29 +58,52 @@ async function shortenLink(){
     error(response)
 }
     
+const regex = /(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?/
+
 function error(data){
-    const err = document.querySelector('.err')
-    const regex = /(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?/
-    if (inputUrl.value == '' || inputUrl.value !== regex) {
+    const err = document.querySelector('.err')    
+    if (inputUrl.value == '' || !inputUrl.value.match(regex)) {
         err.textContent = data.errormessage
         err.style.display ='block'
         inputUrl.classList.add('longurl')
     }
         
 }
+const listItems = document.querySelector('list-item')
+const link = document.querySelector('.link')
+
     function shortenApi(data) {
-        const link = document.querySelector('.link')
-        const linkToShorten = document.querySelector('.link-to-shorten')    
-        const shortenLink = document.querySelector('.shorten-link')        
-        link.style.display = 'block'
-        linkToShorten.textContent = inputUrl.value
-        shortenLink.textContent = data.shorturl    
+        if(inputUrl.value.match(regex)){
+        const li = document.createElement('li')
+        li.classList.add('list')
+        const p1 = document.createElement('p')
+        p1.textContent = inputUrl.value
+        p1.classList.add('linkToShorten')
+        const span = document.createElement('span')
+        span.classList.add('span')
+        const p2 = document.createElement('p')
+        p2.textContent = data.shorturl
+        p2.classList.add('shortenLink')
+        const btn = document.createElement('button')
+        btn.textContent = 'Copy'
+        btn.classList.add('button-copy')        
+        link.appendChild(li)
+        li.appendChild(p1)        
+        li.appendChild(span)
+        span.appendChild(p2)
+        span.appendChild(btn)             
+        link.style.display = 'block'        
+        
+        const copyButton = document.querySelector('.button-copy')
+        const newURL = document.querySelector('.shortenLink')
+        copyButton.addEventListener('click', () => {
+            newURL.select()
+            window.navigator.clipboard.writeText(newURL.value)
+            copyButton.textContent = 'Copied!'
+         })
+        }        
     } 
   
-//  copyButton.addEventListener('click', () => {
-//     newURL.select()
-//     window.navigator.clipboard.writeText(newURL.value)
-//     copyButton.textContent = 'Copied!'
-//  })
+ 
 
         
