@@ -747,6 +747,10 @@ video {
   scroll-behavior: smooth;
 }
 
+.break-words {
+  overflow-wrap: break-word;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -763,27 +767,9 @@ video {
   border-radius: 0.125rem;
 }
 
-.border {
-  border-width: 1px;
-}
-
-.border-4 {
-  border-width: 4px;
-}
-
 .border-gray {
   --tw-border-opacity: 1;
   border-color: hsl(0 0% 75% / var(--tw-border-opacity));
-}
-
-.border-red {
-  --tw-border-opacity: 1;
-  border-color: hsl(0 87% 67% / var(--tw-border-opacity));
-}
-
-.border-sky-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(14 165 233 / var(--tw-border-opacity));
 }
 
 .bg-cyan {
@@ -896,6 +882,16 @@ video {
   font-weight: 500;
 }
 
+.text-cyan {
+  --tw-text-opacity: 1;
+  color: hsl(180 66% 49% / var(--tw-text-opacity));
+}
+
+.text-darkViolet {
+  --tw-text-opacity: 1;
+  color: hsl(257 27% 26% / var(--tw-text-opacity));
+}
+
 .text-gray {
   --tw-text-opacity: 1;
   color: hsl(0 0% 75% / var(--tw-text-opacity));
@@ -918,6 +914,10 @@ video {
 
 .opacity-30 {
   opacity: 0.3;
+}
+
+.opacity-90 {
+  opacity: 0.9;
 }
 
 .outline-none {
@@ -1018,8 +1018,11 @@ video {
 }
 
 .longurl{
-  border: 12px;
-  border-color: red;
+  border: 3px solid rgb(182, 48, 48);
+}
+
+.link{
+  display: none
 }
 
 @media (min-width: 768px) {
@@ -1086,12 +1089,26 @@ video {
     flex-direction: row;
   }
 
+  .md\:items-center {
+    align-items: center;
+  }
+
   .md\:items-baseline {
     align-items: baseline;
   }
 
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
   .md\:justify-around {
     justify-content: space-around;
+  }
+
+  .md\:space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
@@ -1213,6 +1230,10 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:p-2 {
+    padding: 0.5rem;
   }
 
   .lg\:p-4 {
