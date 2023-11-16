@@ -65,7 +65,12 @@ function error(data){
     if (inputUrl.value == '' || !inputUrl.value.match(regex)) {
         err.textContent = data.errormessage
         err.style.display ='block'
-        inputUrl.classList.add('longurl')
+        c
+    }
+
+    else{
+        err.style.display ='none'
+        inputUrl.classList.remove('longurl')
     }
         
 }
@@ -95,7 +100,7 @@ const link = document.querySelector('.link')
         link.style.display = 'block'        
         
         const copyButton = document.querySelector('.button-copy')
-        const newURL = document.querySelector('.shortenLink')
+        const newURL = document.querySelector('p2')
         copyButton.addEventListener('click', () => {
             newURL.select()
             window.navigator.clipboard.writeText(newURL.value)
