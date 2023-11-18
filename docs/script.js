@@ -86,9 +86,10 @@ const link = document.querySelector('.link')
         p1.classList.add('linkToShorten')
         const span = document.createElement('span')
         span.classList.add('span')
-        const p2 = document.createElement('p')
-        p2.textContent = data.shorturl
+        const p2 = document.createElement('input')
+        p2.value = data.shorturl
         p2.classList.add('shortenLink')
+        p2.style.outline = 'none'
         const btn = document.createElement('button')
         btn.textContent = 'Copy'
         btn.classList.add('button-copy')        
@@ -100,12 +101,12 @@ const link = document.querySelector('.link')
         link.style.display = 'block'        
         
         const copyButton = document.querySelector('.button-copy')
-        const newURL = document.querySelector('p2')
-        copyButton.addEventListener('click', () => {
+        const newURL = document.querySelector('.shortenLink')
+        copyButton.onclick= () =>{
             newURL.select()
             window.navigator.clipboard.writeText(newURL.value)
             copyButton.textContent = 'Copied!'
-         })
+         }
         }        
     } 
   
